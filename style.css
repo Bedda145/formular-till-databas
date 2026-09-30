@@ -1,0 +1,45 @@
+body {
+    font-family: system-ui, sans-serif;
+    background: #14161c;
+    color: #e8e8ec;
+    margin: 0;
+}
+
+header {
+    background: #1f2230;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    border: 1px solid #3a3f55;
+    border-radius: 6px;
+    background: #1f2230;
+    color: inherit;
+    font: inherit;
+}
+
+button {
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    background: #6c6ce7;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
