@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS spelforslag
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+USE spelforslag;
+
+CREATE TABLE forslag (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    namn VARCHAR(100) NOT NULL,
+    spel VARCHAR(100) NOT NULL,
+    kommentar TEXT NOT NULL,
+    skapad TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
