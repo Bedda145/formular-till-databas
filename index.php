@@ -1,5 +1,13 @@
+<?php
+require "db.php";
+
+$sql = "SELECT * FROM forslag ORDER BY skapad DESC";
+$stmt = $pdo->query($sql);
+$allaForslag = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +31,18 @@
 
         <button type="submit">Skicka</button>
       </form>
+      
+      <section>
+        <h2>Alla förslag</h2>
+        
+        <?php foreach ($allaForslag as $forslag): ?>
+          <article>
+            <h3><?= htmlspecialchars($forslag['spel']) ?></h3>
+            <p><?= htmlspecialchars($forslag['kommentar']) ?></p>
+            <small>Föreslaget av <?= htmlspecialchars($forslag['namn']) ?></small>
+          </article>
+          <?php endforeach; ?>
+      </section>
     </main> 
 </body>
 </html>
