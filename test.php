@@ -1,1 +1,3 @@
-<?php echo "Hej från PHP!"; ?>
+<?php 
+require "db.php";
+echo "Ansluten till databasen!";
