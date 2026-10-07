@@ -16,7 +16,7 @@
         <input type="text" id="namn" name="namn" required>
 
         <label for="spel">Spel</label>
-        <input type="text" id="spel" required>
+        <input type="text" id="spel" name="spel" required>
 
         <label for="kommentar">Varför ska vi spela det?</label>
         <textarea id="kommentar" name="kommentar" required></textarea>
