@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "db.php";
 
 $sql = "SELECT * FROM forslag ORDER BY skapad DESC";
@@ -17,6 +18,15 @@ $allaForslag = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <header>
       <h1>Spelförslag</h1>
+      <nav>
+        <?php if(isset($_SESSION['anvandarnamn'])): ?>
+          <span>Inloggad som <?= htmlspecialchars($_SESSION['anvandarnamn']) ?></span>
+          <a href="logga-ut.php">Logga ut</a>
+        <?php else: ?>
+          <a href="logga-in.php">Logga in</a>
+          <a href="registrera.php">Skapa konto</a>
+        <?php endif; ?>
+      </nav>
     </header>
     <main>
       <form action="spara.php" method="POST">
