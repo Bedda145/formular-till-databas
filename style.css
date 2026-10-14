@@ -43,3 +43,36 @@ button {
     font: inherit;
     cursor: pointer;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #a29bfe;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+article {
+    background: #1f2230;
+    border: 1px solid #3a3f55;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+article h3 {
+    margin: 0 0 0.5rem;
+}
+
+article small {
+    color: #9a9cb0;
+}

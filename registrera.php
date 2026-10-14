@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "db.php";
 
 $meddelande = "";
@@ -36,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <header>
       <h1>Skapa konto</h1>
+      <?php require "meny.php"; ?>
     </header>
 
     <main>
